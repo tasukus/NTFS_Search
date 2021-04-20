@@ -1,0 +1,244 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// âpåÍ resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH , SUBLANG_NEUTRAL
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SEARCH DIALOGEX 0 , 0 , 367 , 252
+STYLE DS_LOCALEDIT | DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "NTFS-Search"
+MENU IDC_NTFSEARCH
+FONT 8 , "MS Shell Dlg" , 400 , 0 , 0x1
+BEGIN
+EDITTEXT        IDC_EDIT , 10 , 16 , 280 , 12 , ES_AUTOHSCROLL
+PUSHBUTTON      "&Search" , IDOK2 , 295 , 16 , 59 , 11
+CONTROL         "" , IDC_DRIVES , "ComboBoxEx32" , CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP , 10 , 34 , 148 , 82
+PUSHBUTTON      "&Unload" , IDC_UNLOAD , 182 , 34 , 29 , 14
+CONTROL         "&Always load MFT" , IDC_LOADALWAYS , "Button" , BS_AUTOCHECKBOX | WS_TABSTOP , 214 , 34 , 67 , 9
+CONTROL         "&Live" , IDC_LIVE , "Button" , BS_AUTOCHECKBOX | WS_TABSTOP , 295 , 33 , 59 , 11
+CONTROL         "&Case sensitive" , IDC_CASE , "Button" , BS_AUTOCHECKBOX | WS_TABSTOP , 295 , 44 , 59 , 8
+CONTROL         "" , IDC_RESULT , "SysListView32" , LVS_REPORT | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | LVS_OWNERDATA | WS_BORDER | WS_TABSTOP , 7 , 60 , 353 , 184
+GROUPBOX        "Search" , IDC_STATIC , 7 , 7 , 353 , 49 , WS_GROUP
+PUSHBUTTON      "&Refresh" , IDC_REFRESH , 162 , 34 , 20 , 14
+END
+
+IDD_WAIT DIALOGEX 0 , 0 , 221 , 31
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Please wait"
+FONT 8 , "MS Shell Dlg" , 400 , 0 , 0x1
+BEGIN
+CONTROL         "" , IDC_PROGRESS , "msctls_progress32" , WS_BORDER , 7 , 7 , 207 , 17
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+IDD_SEARCH , DIALOG
+BEGIN
+LEFTMARGIN , 7
+RIGHTMARGIN , 360
+VERTGUIDE , 10
+VERTGUIDE , 158
+VERTGUIDE , 162
+VERTGUIDE , 182
+VERTGUIDE , 211
+VERTGUIDE , 214
+VERTGUIDE , 290
+VERTGUIDE , 295
+VERTGUIDE , 337
+VERTGUIDE , 342
+VERTGUIDE , 354
+TOPMARGIN , 7
+BOTTOMMARGIN , 244
+HORZGUIDE , 16
+HORZGUIDE , 27
+HORZGUIDE , 34
+HORZGUIDE , 48
+HORZGUIDE , 60
+END
+
+IDD_WAIT , DIALOG
+BEGIN
+LEFTMARGIN , 7
+RIGHTMARGIN , 214
+TOPMARGIN , 7
+BOTTOMMARGIN , 24
+END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDC_NTFSEARCH MENU
+BEGIN
+POPUP "&File"
+BEGIN
+MENUITEM "&Clear results" , IDM_CLEAR
+MENUITEM "Save results ..." , IDM_SAVE
+MENUITEM SEPARATOR
+MENUITEM "Use Linux/NT 4.0 fixes" , ID_LINUXFIX , CHECKED , GRAYED
+MENUITEM SEPARATOR
+MENUITEM "E&xit\tAlt+F4" , IDM_EXIT
+END
+END
+
+#endif    // âpåÍ resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// âpåÍ (ïƒçë) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH , SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU
+BEGIN
+POPUP "POPUP"
+BEGIN
+MENUITEM "&Open file" , IDM_OPEN
+MENUITEM SEPARATOR
+MENUITEM "Open file (&minimized)" , IDM_OPENMIN
+MENUITEM "Open &with ..." , IDM_OPENWITH
+MENUITEM "Open &directory ..." , IDM_OPENDIR
+MENUITEM "Open command &window" , ID_CMDPROMPT
+MENUITEM SEPARATOR
+MENUITEM "&Copy" , ID_COPY
+MENUITEM "Copy &full path" , ID_COPY_NAMES
+MENUITEM "&Delete" , ID_DELETE
+MENUITEM "Delete on &reboot" , ID_DELETE_ON_REBOOT
+MENUITEM SEPARATOR
+MENUITEM "&Properties ..." , IDM_PROPERTIES
+END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_NTFSEARCH           ICON                    "NTFS-Search.ico"
+
+IDI_SMALL               ICON                    "small.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_NTFSEARCH ACCELERATORS
+BEGIN
+VK_DELETE , IDM_CLEAR , VIRTKEY , CONTROL , NOINVERT
+"S" , IDM_SAVE , VIRTKEY , CONTROL , NOINVERT
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE
+BEGIN
+"resource.h\0"
+END
+
+2 TEXTINCLUDE
+BEGIN
+"#ifndef APSTUDIO_INVOKED\r\n"
+"#include ""targetver.h""\r\n"
+"#endif\r\n"
+"#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+"#include ""windows.h""\r\n"
+"#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+"\0"
+END
+
+3 TEXTINCLUDE
+BEGIN
+"\r\n"
+"\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+IDC_NTFSEARCH           "NTFSSEARCH"
+END
+
+STRINGTABLE
+BEGIN
+IDS_DELETEDFILE         "The file is deleted and cannot be accessed throught the filesystem driver.\nUse a recover program to get access to the stored data."
+IDS_FILENOTFOUND        "The file coulnd't be found.\nThe file is propably hidden or a metafile."
+IDS_DISKERROR           "The disk couldn't be opened.\n\nYOU HAVE TO BE ADMINISTRATOR TO USE THIS TOOL."
+END
+
+#endif    // âpåÍ (ïƒçë) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
